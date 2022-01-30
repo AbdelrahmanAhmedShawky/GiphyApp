@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BC8B52AE27A67D3E00EAB396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B52AD27A67D3E00EAB396 /* AppDelegate.swift */; };
-		BC8B52B027A67D3E00EAB396 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B52AF27A67D3E00EAB396 /* SceneDelegate.swift */; };
 		BC8B52B227A67D3E00EAB396 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B52B127A67D3E00EAB396 /* ViewController.swift */; };
 		BC8B52B527A67D3E00EAB396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8B52B327A67D3E00EAB396 /* Main.storyboard */; };
 		BC8B52B827A67D3E00EAB396 /* GiphyApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC8B52B627A67D3E00EAB396 /* GiphyApp.xcdatamodeld */; };
@@ -38,6 +37,8 @@
 		BC8B531F27A68A3800EAB396 /* GifQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B531E27A68A3800EAB396 /* GifQuery.swift */; };
 		BC8B532327A68C0200EAB396 /* GifsRequestDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B532227A68C0200EAB396 /* GifsRequestDTO+Mapping.swift */; };
 		BC8B532527A68C2200EAB396 /* GifsResponseDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B532427A68C2200EAB396 /* GifsResponseDTO+Mapping.swift */; };
+		BC8B532727A690F000EAB396 /* AppConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B532627A690F000EAB396 /* AppConfigurations.swift */; };
+		BC8B532927A699B400EAB396 /* Countries.json in Resources */ = {isa = PBXBuildFile; fileRef = BC8B532827A699B400EAB396 /* Countries.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +61,6 @@
 /* Begin PBXFileReference section */
 		BC8B52AA27A67D3E00EAB396 /* GiphyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiphyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8B52AD27A67D3E00EAB396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BC8B52AF27A67D3E00EAB396 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BC8B52B127A67D3E00EAB396 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BC8B52B427A67D3E00EAB396 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC8B52B727A67D3E00EAB396 /* GiphyApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GiphyApp.xcdatamodel; sourceTree = "<group>"; };
@@ -93,6 +93,8 @@
 		BC8B531E27A68A3800EAB396 /* GifQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifQuery.swift; sourceTree = "<group>"; };
 		BC8B532227A68C0200EAB396 /* GifsRequestDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GifsRequestDTO+Mapping.swift"; sourceTree = "<group>"; };
 		BC8B532427A68C2200EAB396 /* GifsResponseDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GifsResponseDTO+Mapping.swift"; sourceTree = "<group>"; };
+		BC8B532627A690F000EAB396 /* AppConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurations.swift; sourceTree = "<group>"; };
+		BC8B532827A699B400EAB396 /* Countries.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Countries.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,7 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				BC8B52AD27A67D3E00EAB396 /* AppDelegate.swift */,
-				BC8B52AF27A67D3E00EAB396 /* SceneDelegate.swift */,
+				BC8B532627A690F000EAB396 /* AppConfigurations.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -218,6 +220,7 @@
 				BC8B52B927A67D4200EAB396 /* Assets.xcassets */,
 				BC8B52BB27A67D4200EAB396 /* LaunchScreen.storyboard */,
 				BC8B52BE27A67D4200EAB396 /* Info.plist */,
+				BC8B532827A699B400EAB396 /* Countries.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 			files = (
 				BC8B52BD27A67D4200EAB396 /* LaunchScreen.storyboard in Resources */,
 				BC8B52BA27A67D4200EAB396 /* Assets.xcassets in Resources */,
+				BC8B532927A699B400EAB396 /* Countries.json in Resources */,
 				BC8B52B527A67D3E00EAB396 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,9 +444,9 @@
 				BC8B52AE27A67D3E00EAB396 /* AppDelegate.swift in Sources */,
 				BC8B531227A681EF00EAB396 /* UIViewController+AddChild.swift in Sources */,
 				BC8B530F27A681EF00EAB396 /* LoadingView.swift in Sources */,
+				BC8B532727A690F000EAB396 /* AppConfigurations.swift in Sources */,
 				BC8B531127A681EF00EAB396 /* CGSize+ScaledSize.swift in Sources */,
 				BC8B531027A681EF00EAB396 /* Observable.swift in Sources */,
-				BC8B52B027A67D3E00EAB396 /* SceneDelegate.swift in Sources */,
 				BC8B531727A681EF00EAB396 /* Alertable.swift in Sources */,
 				BC8B52B827A67D3E00EAB396 /* GiphyApp.xcdatamodeld in Sources */,
 				BC8B531327A681EF00EAB396 /* DataTransferError+ConnectionError.swift in Sources */,
@@ -627,6 +631,8 @@
 		BC8B52D827A67D4300EAB396 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				API_BASE_URL = "http://api.giphy.com";
+				API_KEY = 5rB5mp0iMzUdRq8Z9pUlAbbtU7aTsjbv;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -654,6 +660,8 @@
 		BC8B52D927A67D4300EAB396 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				API_BASE_URL = "http://api.giphy.com";
+				API_KEY = 5rB5mp0iMzUdRq8Z9pUlAbbtU7aTsjbv;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
