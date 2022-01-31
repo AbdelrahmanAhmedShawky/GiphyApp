@@ -20,7 +20,6 @@
 		2D5836A427A80D38007E6F63 /* LanguageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5836A327A80D38007E6F63 /* LanguageRepository.swift */; };
 		2D5836A627A80F5A007E6F63 /* LanguageListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5836A527A80F5A007E6F63 /* LanguageListUseCase.swift */; };
 		BC8B52AE27A67D3E00EAB396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B52AD27A67D3E00EAB396 /* AppDelegate.swift */; };
-		BC8B52B227A67D3E00EAB396 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B52B127A67D3E00EAB396 /* ViewController.swift */; };
 		BC8B52B827A67D3E00EAB396 /* GiphyApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC8B52B627A67D3E00EAB396 /* GiphyApp.xcdatamodeld */; };
 		BC8B52BA27A67D4200EAB396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC8B52B927A67D4200EAB396 /* Assets.xcassets */; };
 		BC8B52BD27A67D4200EAB396 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8B52BB27A67D4200EAB396 /* LaunchScreen.storyboard */; };
@@ -98,7 +97,6 @@
 		2D5836A527A80F5A007E6F63 /* LanguageListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageListUseCase.swift; sourceTree = "<group>"; };
 		BC8B52AA27A67D3E00EAB396 /* GiphyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiphyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8B52AD27A67D3E00EAB396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BC8B52B127A67D3E00EAB396 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BC8B52B727A67D3E00EAB396 /* GiphyApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GiphyApp.xcdatamodel; sourceTree = "<group>"; };
 		BC8B52B927A67D4200EAB396 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC8B52BC27A67D4200EAB396 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -264,15 +262,14 @@
 		BC8B52AC27A67D3E00EAB396 /* GiphyApp */ = {
 			isa = PBXGroup;
 			children = (
+				BC8B52FE27A680ED00EAB396 /* Application */,
 				BC8B533E27A6C44E00EAB396 /* Presentations */,
 				BC8B532027A68BCB00EAB396 /* Data */,
 				BC8B531A27A688CF00EAB396 /* Domain */,
 				BC8B530127A681D300EAB396 /* Utils */,
 				BC8B52FF27A6811000EAB396 /* Resources */,
-				BC8B52FE27A680ED00EAB396 /* Application */,
 				BC8B52F527A680C200EAB396 /* Common */,
 				BC8B52EF27A680C200EAB396 /* Infrastructure */,
-				BC8B52B127A67D3E00EAB396 /* ViewController.swift */,
 				BC8B52B627A67D3E00EAB396 /* GiphyApp.xcdatamodeld */,
 			);
 			path = GiphyApp;
@@ -679,7 +676,6 @@
 				2D58369627A7DE0B007E6F63 /* OnBordingViewController.swift in Sources */,
 				BC8B531827A681EF00EAB396 /* StoryboardInstantiable.swift in Sources */,
 				BC8B534427A6C96B00EAB396 /* GifsListViewModel.swift in Sources */,
-				BC8B52B227A67D3E00EAB396 /* ViewController.swift in Sources */,
 				BC8B534A27A6E3D000EAB396 /* GifsListViewController.swift in Sources */,
 				BC8B531427A681EF00EAB396 /* UIViewController+AddBehaviors.swift in Sources */,
 				2D58369B27A7E49A007E6F63 /* OnBordingFlowCoordinator.swift in Sources */,
