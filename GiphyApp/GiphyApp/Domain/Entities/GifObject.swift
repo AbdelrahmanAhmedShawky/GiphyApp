@@ -3,7 +3,7 @@ import Foundation
 struct Pagination:Equatable {
     let count     : Int?
     let offset    :Int?
-    let totalPages: Int?
+    let total_count: Int?
 }
 struct Meta:Equatable {
     let status : Int?

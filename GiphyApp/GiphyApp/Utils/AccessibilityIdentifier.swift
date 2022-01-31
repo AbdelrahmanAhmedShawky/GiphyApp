@@ -1,6 +1,6 @@
 import Foundation
 
 public struct AccessibilityIdentifier {
-    static let movieDetailsView = "AccessibilityIdentifierMovieDetailsView"
+    static let gifDetailsView = "AccessibilityIdentifierGifDetailsView"
     static let searchField = "AccessibilityIdentifierSearchMovies"
 }
