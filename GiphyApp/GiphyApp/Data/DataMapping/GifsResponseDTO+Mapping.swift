@@ -17,6 +17,7 @@ extension GifsResponseDTO {
         private enum CodingKeys: String, CodingKey {
             case id
             case title
+            case username
             case source_tld
             case rating
             case url
@@ -24,6 +25,7 @@ extension GifsResponseDTO {
         }
         let id: String
         let title: String?
+        let username: String?
         let source_tld: String?
         let rating: String?
         let url: URL?
@@ -88,6 +90,7 @@ extension GifsResponseDTO.GifDTO {
     func toDomain() -> GifObject {
         return .init(id: GifObject.Identifier(id),
                      title: title,
+                     username:username,
                      source_tld: source_tld,
                      rating: rating,
                      url: url,

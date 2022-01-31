@@ -36,8 +36,14 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYe-J3-fvH">
+                                                            <rect key="frame" x="20" y="36" width="374" height="17"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                         <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qbR-gj-pjR">
-                                                            <rect key="frame" x="20" y="36" width="374" height="121"/>
+                                                            <rect key="frame" x="20" y="61" width="374" height="96"/>
                                                             <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <wkWebViewConfiguration key="configuration">
                                                                 <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -46,8 +52,11 @@
                                                         </wkWebView>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstItem="qbR-gj-pjR" firstAttribute="top" secondItem="CYe-J3-fvH" secondAttribute="bottom" constant="8" id="88A-pP-Hrf"/>
+                                                        <constraint firstItem="CYe-J3-fvH" firstAttribute="top" secondItem="ELO-Uo-jvv" secondAttribute="bottom" constant="8" symbolic="YES" id="EMN-xm-BdK"/>
                                                         <constraint firstItem="ELO-Uo-jvv" firstAttribute="trailing" secondItem="1UU-qQ-hnZ" secondAttribute="trailingMargin" id="EkH-nV-DEc"/>
-                                                        <constraint firstItem="qbR-gj-pjR" firstAttribute="top" secondItem="ELO-Uo-jvv" secondAttribute="bottom" constant="8" id="JSF-jc-Y4I"/>
+                                                        <constraint firstItem="CYe-J3-fvH" firstAttribute="leading" secondItem="1UU-qQ-hnZ" secondAttribute="leadingMargin" id="Ere-fg-ynw"/>
+                                                        <constraint firstItem="CYe-J3-fvH" firstAttribute="trailing" secondItem="1UU-qQ-hnZ" secondAttribute="trailingMargin" id="JhW-dn-TBA"/>
                                                         <constraint firstItem="qbR-gj-pjR" firstAttribute="bottom" secondItem="1UU-qQ-hnZ" secondAttribute="bottomMargin" constant="8" id="PAN-pj-bq0"/>
                                                         <constraint firstItem="qbR-gj-pjR" firstAttribute="leading" secondItem="1UU-qQ-hnZ" secondAttribute="leadingMargin" id="WOE-0g-Fo9"/>
                                                         <constraint firstItem="ELO-Uo-jvv" firstAttribute="top" secondItem="1UU-qQ-hnZ" secondAttribute="top" constant="11" id="YLx-qO-NTc"/>
@@ -59,6 +68,7 @@
                                                 <connections>
                                                     <outlet property="posterGifView" destination="qbR-gj-pjR" id="nem-eR-gdj"/>
                                                     <outlet property="titleLabel" destination="ELO-Uo-jvv" id="WDP-Un-KZ7"/>
+                                                    <outlet property="userNameLabel" destination="CYe-J3-fvH" id="4xk-VV-jUe"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
