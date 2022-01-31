@@ -23,7 +23,9 @@ struct GifObject : Equatable, Identifiable {
     typealias Identifier = String
     let id         : Identifier
     let title      : String?
+    let username   : String?
     let source_tld : String?
+    let import_datetime : String?
     let rating     : String?
     let url        : URL?
     let images     : Images?

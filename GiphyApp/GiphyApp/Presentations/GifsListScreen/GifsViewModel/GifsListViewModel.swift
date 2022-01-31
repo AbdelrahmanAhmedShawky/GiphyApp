@@ -75,9 +75,15 @@ final class DefaultGifsListViewModel: GifsListViewModel {
             .filter { $0.pagination.count != gifsPage.pagination.count }
             + [gifsPage]
 
+       
         items.value = pages.gifs.map(GifsListItemViewModel.init)
-    }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss" // yyyy-MM-dd HH:mm:ss"
 
+        items.value = items.value.sorted(by: { dateFormatter.date(from:$0.import_datetime)!.compare(dateFormatter.date(from:$1.import_datetime)!) == .orderedDescending })
+    }
+// title = "Lunar New Year Lol GIF by League of Legends";
     private func resetPages(gifQuery: GifQuery) {
         currentPage = 0
         totalPageCount = 10

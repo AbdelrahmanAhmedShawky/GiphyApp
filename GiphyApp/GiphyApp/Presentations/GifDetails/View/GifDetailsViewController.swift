@@ -5,7 +5,8 @@ final class GifDetailsViewController: UIViewController, StoryboardInstantiable {
 
     @IBOutlet private var gifImageView: WKWebView!
     @IBOutlet private var overviewTextView: UITextView!
-
+    @IBOutlet private var btnFavorite:UIButton!
+    
     // MARK: - Lifecycle
 
     private var viewModel: GifDetailsViewModel!
@@ -19,13 +20,8 @@ final class GifDetailsViewController: UIViewController, StoryboardInstantiable {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        bind(to: viewModel)
     }
 
-    private func bind(to viewModel: GifDetailsViewModel) {
-
-    }
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
     }
@@ -34,7 +30,8 @@ final class GifDetailsViewController: UIViewController, StoryboardInstantiable {
 
     private func setupViews() {
         title = viewModel.gif.title
-        overviewTextView.text = viewModel.gif.title
+        btnFavorite.setTitle(self.viewModel.getSaveItem.contains(where: {$0.title == viewModel.gif.title }) ? "favorites" :"Add to favorites", for: .normal)
+        overviewTextView.text = viewModel.gif.username
         DispatchQueue.main.async {
             guard let url = self.viewModel.gif.images?.fixed_height?.url else {
                 return
@@ -42,7 +39,10 @@ final class GifDetailsViewController: UIViewController, StoryboardInstantiable {
             let html = "<img src=\"\(url)\" width=\"100%\">"
           self.gifImageView.loadHTMLString(html, baseURL: nil)
         }
-//        posterImageView.isHidden = viewModel.isPosterImageHidden
         view.accessibilityIdentifier = AccessibilityIdentifier.gifDetailsView
+    }
+    @IBAction func addToFavorite(_ sender: Any) {
+        self.viewModel.getSaveItem.contains(where: {$0.title == viewModel.gif.title })  ? () : viewModel.didSelectItem()
+        btnFavorite.setTitle("favorites", for: .normal)
     }
 }

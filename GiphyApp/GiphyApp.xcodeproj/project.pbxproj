@@ -20,7 +20,6 @@
 		2D5836A427A80D38007E6F63 /* LanguageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5836A327A80D38007E6F63 /* LanguageRepository.swift */; };
 		2D5836A627A80F5A007E6F63 /* LanguageListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5836A527A80F5A007E6F63 /* LanguageListUseCase.swift */; };
 		BC8B52AE27A67D3E00EAB396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B52AD27A67D3E00EAB396 /* AppDelegate.swift */; };
-		BC8B52B827A67D3E00EAB396 /* GiphyApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC8B52B627A67D3E00EAB396 /* GiphyApp.xcdatamodeld */; };
 		BC8B52BA27A67D4200EAB396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC8B52B927A67D4200EAB396 /* Assets.xcassets */; };
 		BC8B52BD27A67D4200EAB396 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8B52BB27A67D4200EAB396 /* LaunchScreen.storyboard */; };
 		BC8B52C827A67D4300EAB396 /* GiphyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B52C727A67D4300EAB396 /* GiphyAppTests.swift */; };
@@ -63,6 +62,10 @@
 		BC8B535827A71C3000EAB396 /* GifsSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B535527A71C3000EAB396 /* GifsSceneDIContainer.swift */; };
 		BC8B535927A71C3000EAB396 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B535627A71C3000EAB396 /* AppDIContainer.swift */; };
 		BC8B535A27A71C3000EAB396 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B535727A71C3000EAB396 /* AppFlowCoordinator.swift */; };
+		BC8B535D27A856C600EAB396 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = BC8B535C27A856C600EAB396 /* Realm */; };
+		BC8B535F27A856C600EAB396 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BC8B535E27A856C600EAB396 /* RealmSwift */; };
+		BC8B536227A8593900EAB396 /* GifSaveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B536127A8593900EAB396 /* GifSaveModel.swift */; };
+		BC8B536427A85BB200EAB396 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B536327A85BB200EAB396 /* UIImage+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,7 +100,6 @@
 		2D5836A527A80F5A007E6F63 /* LanguageListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageListUseCase.swift; sourceTree = "<group>"; };
 		BC8B52AA27A67D3E00EAB396 /* GiphyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiphyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8B52AD27A67D3E00EAB396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BC8B52B727A67D3E00EAB396 /* GiphyApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GiphyApp.xcdatamodel; sourceTree = "<group>"; };
 		BC8B52B927A67D4200EAB396 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC8B52BC27A67D4200EAB396 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC8B52BE27A67D4200EAB396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -143,6 +145,8 @@
 		BC8B535527A71C3000EAB396 /* GifsSceneDIContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifsSceneDIContainer.swift; sourceTree = "<group>"; };
 		BC8B535627A71C3000EAB396 /* AppDIContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		BC8B535727A71C3000EAB396 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
+		BC8B536127A8593900EAB396 /* GifSaveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifSaveModel.swift; sourceTree = "<group>"; };
+		BC8B536327A85BB200EAB396 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC8B535F27A856C600EAB396 /* RealmSwift in Frameworks */,
+				BC8B535D27A856C600EAB396 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +179,7 @@
 		2D58368727A7CD68007E6F63 /* GifDetails */ = {
 			isa = PBXGroup;
 			children = (
+				BC8B536027A8588000EAB396 /* Model */,
 				2D58368927A7CD7B007E6F63 /* View */,
 				2D58368827A7CD73007E6F63 /* ViewModel */,
 			);
@@ -270,7 +277,6 @@
 				BC8B52FF27A6811000EAB396 /* Resources */,
 				BC8B52F527A680C200EAB396 /* Common */,
 				BC8B52EF27A680C200EAB396 /* Infrastructure */,
-				BC8B52B627A67D3E00EAB396 /* GiphyApp.xcdatamodeld */,
 			);
 			path = GiphyApp;
 			sourceTree = "<group>";
@@ -364,6 +370,7 @@
 				BC8B530827A681EF00EAB396 /* UIViewController+AddBehaviors.swift */,
 				BC8B530927A681EF00EAB396 /* UIViewController+ActivityIndicator.swift */,
 				BC8B530A27A681EF00EAB396 /* UIImageView+ImageSizeAfterAspectFit.swift */,
+				BC8B536327A85BB200EAB396 /* UIImage+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -472,8 +479,8 @@
 			isa = PBXGroup;
 			children = (
 				2D58369027A7DB4F007E6F63 /* OnBording */,
-				2D58368727A7CD68007E6F63 /* GifDetails */,
 				BC8B533F27A6C45C00EAB396 /* GifsListScreen */,
+				2D58368727A7CD68007E6F63 /* GifDetails */,
 			);
 			path = Presentations;
 			sourceTree = "<group>";
@@ -532,6 +539,14 @@
 			path = DIContainer;
 			sourceTree = "<group>";
 		};
+		BC8B536027A8588000EAB396 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC8B536127A8593900EAB396 /* GifSaveModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -548,6 +563,10 @@
 			dependencies = (
 			);
 			name = GiphyApp;
+			packageProductDependencies = (
+				BC8B535C27A856C600EAB396 /* Realm */,
+				BC8B535E27A856C600EAB396 /* RealmSwift */,
+			);
 			productName = GiphyApp;
 			productReference = BC8B52AA27A67D3E00EAB396 /* GiphyApp.app */;
 			productType = "com.apple.product-type.application";
@@ -620,6 +639,9 @@
 				Base,
 			);
 			mainGroup = BC8B52A127A67D3D00EAB396;
+			packageReferences = (
+				BC8B535B27A856C600EAB396 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = BC8B52AB27A67D3E00EAB396 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -685,6 +707,7 @@
 				BC8B533827A6AB7300EAB396 /* GifListDataRepository.swift in Sources */,
 				BC8B532327A68C0200EAB396 /* GifsRequestDTO+Mapping.swift in Sources */,
 				BC8B531627A681EF00EAB396 /* UIImageView+ImageSizeAfterAspectFit.swift in Sources */,
+				BC8B536227A8593900EAB396 /* GifSaveModel.swift in Sources */,
 				BC8B52AE27A67D3E00EAB396 /* AppDelegate.swift in Sources */,
 				BC8B531227A681EF00EAB396 /* UIViewController+AddChild.swift in Sources */,
 				2D5836A227A7F77E007E6F63 /* FileManagerService.swift in Sources */,
@@ -694,13 +717,13 @@
 				BC8B531127A681EF00EAB396 /* CGSize+ScaledSize.swift in Sources */,
 				BC8B531027A681EF00EAB396 /* Observable.swift in Sources */,
 				BC8B531727A681EF00EAB396 /* Alertable.swift in Sources */,
-				BC8B52B827A67D3E00EAB396 /* GiphyApp.xcdatamodeld in Sources */,
 				BC8B531327A681EF00EAB396 /* DataTransferError+ConnectionError.swift in Sources */,
 				BC8B52F927A680C200EAB396 /* NetworkService.swift in Sources */,
 				BC8B532527A68C2200EAB396 /* GifsResponseDTO+Mapping.swift in Sources */,
 				BC8B535327A7197600EAB396 /* GifsListItemCell.swift in Sources */,
 				BC8B531927A681EF00EAB396 /* AccessibilityIdentifier.swift in Sources */,
 				BC8B532C27A6A31600EAB396 /* APIEndpoints.swift in Sources */,
+				BC8B536427A85BB200EAB396 /* UIImage+Extension.swift in Sources */,
 				BC8B534727A6D94200EAB396 /* GifsListFlowCoordinator.swift in Sources */,
 				BC8B533D27A6B30E00EAB396 /* DefaultFetchGifsUseCase.swift in Sources */,
 				BC8B52FB27A680C200EAB396 /* NetworkConfig.swift in Sources */,
@@ -1067,18 +1090,29 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCVersionGroup section */
-		BC8B52B627A67D3E00EAB396 /* GiphyApp.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				BC8B52B727A67D3E00EAB396 /* GiphyApp.xcdatamodel */,
-			);
-			currentVersion = BC8B52B727A67D3E00EAB396 /* GiphyApp.xcdatamodel */;
-			path = GiphyApp.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+/* Begin XCRemoteSwiftPackageReference section */
+		BC8B535B27A856C600EAB396 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
 		};
-/* End XCVersionGroup section */
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BC8B535C27A856C600EAB396 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC8B535B27A856C600EAB396 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		BC8B535E27A856C600EAB396 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC8B535B27A856C600EAB396 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BC8B52A227A67D3D00EAB396 /* Project object */;
 }
