@@ -13,9 +13,10 @@ final class AppDIContainer {
         return DefaultDataTransferService(with: apiDataNetwork)
     }()
     
+    lazy var fileService: FileManagerServiceProtocol = FileManagerService()
     // MARK: - DIContainers of scenes
     func makeGifsSceneDIContainer() -> GifsSceneDIContainer {
-        let dependencies = GifsSceneDIContainer.Dependencies(apiDataTransferService: apiDataTransferService)
+        let dependencies = GifsSceneDIContainer.Dependencies(apiDataTransferService: apiDataTransferService, fileManagerService: fileService)
         return GifsSceneDIContainer(dependencies: dependencies)
     }
 }

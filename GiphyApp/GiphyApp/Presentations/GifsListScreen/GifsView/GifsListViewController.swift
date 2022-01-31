@@ -48,6 +48,7 @@ final class GifsListViewController: UIViewController, StoryboardInstantiable, Al
         gifsListTableView.rowHeight = UITableView.automaticDimension
         setupSearchController()
         setupRefreshController()
+        self.navigationItem.setHidesBackButton(true, animated: false)
     }
     
     private func setupRefreshController() {

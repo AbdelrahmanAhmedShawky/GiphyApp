@@ -4,6 +4,7 @@ final class GifsSceneDIContainer {
     
     struct Dependencies {
         let apiDataTransferService: DataTransferService
+        let fileManagerService:FileManagerServiceProtocol
     }
     
     private let dependencies: Dependencies
@@ -21,9 +22,18 @@ final class GifsSceneDIContainer {
         return DefaultFetchGifsUseCase(gifsRepository: makeGifsRepository())
     }
     
+    func makeLanguageUseCase() -> FetchingLanguageListUseCase {
+        return DefaultFetchLanguageListUseCase(languageListRepository: makeLanguageRepository())
+    }
+    
+    
     // MARK: - Repositories
     func makeGifsRepository() -> GifListRepository {
         return GifListDataRepository(dataTransferService: dependencies.apiDataTransferService)
+    }
+    
+    func makeLanguageRepository() -> LanguageListRepository {
+        return LanguageRepository(fileService: dependencies.fileManagerService)
     }
     
     // MARK: - Gifs List
@@ -50,6 +60,25 @@ final class GifsSceneDIContainer {
         return GifSearchFlowCoordinator(navigationController: navigationController,
                                         dependencies: self)
     }
+    
+    // MARK: - OnBordingViewController
+    func makeOnBordingViewController(actions: OnBordingActions) -> OnBordingViewController {
+        return OnBordingViewController.create(with: makeOnBordingViewModel(actions: actions))
+    }
+    
+    func makeOnBordingViewModel(actions: OnBordingActions? = nil) -> OnBordingViewModel {
+        return DefaultOnBordingViewModel(actions: actions,fetchingLanguageListUseCase: makeLanguageUseCase())
+    }
+    
+    // MARK: - Flow Coordinators
+    func makeOnBordingFlowCoordinator(navigationController: UINavigationController,appDIContainer:AppDIContainer) -> OnBordingFlowCoordinator {
+        return OnBordingFlowCoordinator(navigationController: navigationController,
+                                        dependencies: self,appDIContainer: appDIContainer)
+    }
+    
+    
 }
+
+extension GifsSceneDIContainer: OnBordingFlowCoordinatorDependencies {}
 
 extension GifsSceneDIContainer: GifsSearchFlowCoordinatorDependencies {}

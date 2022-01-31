@@ -1,6 +1,5 @@
 {
-    "status": "ok",
-    "Countries" = [
+    "countries" : [
         {
             "name": "Afghanistan",
             "code": "AF",

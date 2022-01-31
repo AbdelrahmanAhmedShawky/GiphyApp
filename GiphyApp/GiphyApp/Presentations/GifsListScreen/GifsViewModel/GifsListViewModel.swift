@@ -89,28 +89,32 @@ final class DefaultGifsListViewModel: GifsListViewModel {
     private func load(gifQuery: GifQuery, loading: GifsListViewModelLoading) {
         self.loading.value = loading
         query.value = gifQuery.q
-
-        if (gifQuery.q == "") {
-            gifsLoadTask = searchGifsUseCase.treandingExecute(limit: nextPage, rating: "pg", completion:  { result in
-                    switch result {
-                    case .success(let page):
-                        self.appendPage(page)
-                    case .failure(let error):
-                        self.handle(error: error)
-                    }
-                    self.loading.value = .none
-            })
-        }else {
-            gifsLoadTask = searchGifsUseCase.searchingExecute(limit: nextPage, rating: "pg", query: gifQuery, lang: "en", completion: { result in
-                    switch result {
-                    case .success(let page):
-                        self.appendPage(page)
-                    case .failure(let error):
-                        self.handle(error: error)
-                    }
-                    self.loading.value = .none
-            })
+        let defaults = UserDefaults.standard
+        if let rating = defaults.string(forKey: "rating") , let lang = defaults.string(forKey: "lang") {
+            if (gifQuery.q == "") {
+                gifsLoadTask = searchGifsUseCase.treandingExecute(limit: nextPage, rating: rating, completion:  { result in
+                        switch result {
+                        case .success(let page):
+                            self.appendPage(page)
+                        case .failure(let error):
+                            self.handle(error: error)
+                        }
+                        self.loading.value = .none
+                })
+            }else {
+                gifsLoadTask = searchGifsUseCase.searchingExecute(limit: nextPage, rating: rating, query: gifQuery, lang: lang, completion: { result in
+                        switch result {
+                        case .success(let page):
+                            self.appendPage(page)
+                        case .failure(let error):
+                            self.handle(error: error)
+                        }
+                        self.loading.value = .none
+                })
+            }
         }
+        
+        
     }
 
     private func handle(error: Error) {

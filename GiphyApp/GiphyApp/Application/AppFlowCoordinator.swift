@@ -12,9 +12,21 @@ final class AppFlowCoordinator {
     }
 
     func start() {
-        // In App Flow we can check if user needs to login, if yes we would run login flow
-        let gifsSceneDIContainer = appDIContainer.makeGifsSceneDIContainer()
-        let flow = gifsSceneDIContainer.makeGifsSearchFlowCoordinator(navigationController: navigationController)
-        flow.start()
+        let defaults = UserDefaults.standard
+        if let rating = defaults.string(forKey: "rating") , let lang = defaults.string(forKey: "lang") {
+            if (rating.isEmpty) || (lang.isEmpty) {
+                let onBording = appDIContainer.makeGifsSceneDIContainer()
+                let flow = onBording.makeOnBordingFlowCoordinator(navigationController: navigationController, appDIContainer: self.appDIContainer)
+                flow.start()
+            }else {
+                let gifsSceneDIContainer = appDIContainer.makeGifsSceneDIContainer()
+                let flow = gifsSceneDIContainer.makeGifsSearchFlowCoordinator(navigationController: navigationController)
+                flow.start()
+            }
+        }else {
+            let onBording = appDIContainer.makeGifsSceneDIContainer()
+            let flow = onBording.makeOnBordingFlowCoordinator(navigationController: navigationController, appDIContainer: self.appDIContainer)
+            flow.start()
+        }
     }
 }
