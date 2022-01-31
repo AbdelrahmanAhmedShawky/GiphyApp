@@ -4,6 +4,7 @@ struct GifsListItemViewModel: Equatable {
     let title: String
     let source_tld : String
     let username : String
+    let import_datetime : String
     let rating     : String
     let url        : URL?
     let images     : Images?
@@ -15,6 +16,7 @@ extension GifsListItemViewModel {
     init(gif: GifObject) {
         self.title = gif.title ?? ""
         self.username = gif.username ?? ""
+        self.import_datetime = gif.import_datetime ?? ""
         self.source_tld = gif.source_tld ?? ""
         self.rating = gif.rating ?? ""
         self.url = gif.url

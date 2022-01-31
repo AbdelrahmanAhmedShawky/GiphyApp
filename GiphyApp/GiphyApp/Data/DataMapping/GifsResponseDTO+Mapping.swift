@@ -18,6 +18,7 @@ extension GifsResponseDTO {
             case id
             case title
             case username
+            case import_datetime
             case source_tld
             case rating
             case url
@@ -26,6 +27,7 @@ extension GifsResponseDTO {
         let id: String
         let title: String?
         let username: String?
+        let import_datetime:String?
         let source_tld: String?
         let rating: String?
         let url: URL?
@@ -92,6 +94,7 @@ extension GifsResponseDTO.GifDTO {
                      title: title,
                      username:username,
                      source_tld: source_tld,
+                     import_datetime:import_datetime,
                      rating: rating,
                      url: url,
                      images: images?.toDomain())

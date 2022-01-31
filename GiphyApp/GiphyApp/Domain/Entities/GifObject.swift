@@ -25,6 +25,7 @@ struct GifObject : Equatable, Identifiable {
     let title      : String?
     let username   : String?
     let source_tld : String?
+    let import_datetime : String?
     let rating     : String?
     let url        : URL?
     let images     : Images?
